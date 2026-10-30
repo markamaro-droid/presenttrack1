@@ -1,0 +1,41 @@
+/* ===== Claymorphism for the dashboard ===== */
+html.clay{--cb1:#E7EEFB;--cb2:#D4E1F6;--cs:#EAF1FC;--shd:rgba(92,116,170,.40);--shl:rgba(255,255,255,.95);--ihl:rgba(255,255,255,.9);--ish:rgba(110,134,190,.28);--b1:#63AEFA;--b2:#1570D0;--bsh:rgba(21,112,208,.42);
+  --t1:#FFE2D3;--t2:#D7F4E6;--t3:#E5DCFB;--t4:#D3EAFB;
+  --clay-sh:10px 10px 24px var(--shd),-8px -8px 20px var(--shl),inset 3px 3px 7px var(--ihl),inset -4px -4px 10px var(--ish);
+  --clay-sm:5px 5px 12px var(--shd),-4px -4px 10px var(--shl),inset 2px 2px 4px var(--ihl),inset -3px -3px 6px var(--ish);
+  --clay-in:inset 5px 5px 10px var(--ish),inset -5px -5px 10px var(--shl);
+  --clay-bt:7px 8px 16px var(--bsh),-4px -4px 10px var(--shl),inset 3px 3px 6px rgba(255,255,255,.5),inset -4px -4px 8px rgba(0,40,110,.28);
+  background:var(--cb2)}
+@media (prefers-color-scheme:dark){html.clay:not([data-theme="light"]){--cb1:#1C2140;--cb2:#12162B;--cs:#232A4B;--shd:rgba(3,5,18,.7);--shl:rgba(130,150,230,.10);--ihl:rgba(170,185,250,.16);--ish:rgba(4,6,22,.55);--b1:#A58BFF;--b2:#6A48E8;--bsh:rgba(60,30,160,.55);--t1:#3B2B3A;--t2:#1F3B38;--t3:#30295A;--t4:#1F3556}}
+html.clay[data-theme="dark"]{--cb1:#1C2140;--cb2:#12162B;--cs:#232A4B;--shd:rgba(3,5,18,.7);--shl:rgba(130,150,230,.10);--ihl:rgba(170,185,250,.16);--ish:rgba(4,6,22,.55);--b1:#A58BFF;--b2:#6A48E8;--bsh:rgba(60,30,160,.55);--t1:#3B2B3A;--t2:#1F3B38;--t3:#30295A;--t4:#1F3556}
+html.clay body{background:linear-gradient(155deg,var(--cb1),var(--cb2))}
+html.clay #water{display:none}
+html.clay .side,html.clay .pn,html.clay .mc{background:var(--cs);border:0;border-radius:28px;box-shadow:var(--clay-sh);backdrop-filter:none;-webkit-backdrop-filter:none}
+html.clay .side{border-radius:34px}
+html.clay .nv{border-radius:18px}
+html.clay .nv:hover{background:var(--cs);box-shadow:var(--clay-sm)}
+html.clay .nv.on{background:linear-gradient(145deg,var(--b1),var(--b2));color:#fff;box-shadow:var(--clay-bt)}
+html.clay .nv em{box-shadow:0 3px 6px rgba(150,20,70,.35)}
+html.clay .bt{background:linear-gradient(145deg,var(--b1),var(--b2));color:#fff;border-radius:18px;padding:11px 18px;box-shadow:var(--clay-bt);transition:transform .15s,box-shadow .15s}
+html.clay .bt:hover{filter:none;transform:translateY(-2px)}
+html.clay .bt:active{transform:translateY(1px);box-shadow:inset 4px 4px 9px rgba(0,40,110,.4),inset -3px -3px 8px rgba(255,255,255,.25)}
+html.clay .bt.gh{background:var(--cs);color:var(--ink);border:0;box-shadow:var(--clay-sm)}
+html.clay .bt.gh:active{box-shadow:var(--clay-in)}
+html.clay .bt.dn{background:none;box-shadow:none;color:var(--err)}
+html.clay .pill2{background:var(--cs);border:0;box-shadow:var(--clay-sm);padding:4px 12px}
+html.clay input[type=text],html.clay input[type=email],html.clay select{background:var(--cs);border:0;border-radius:16px;box-shadow:var(--clay-in)}
+html.clay input:focus-visible,html.clay select:focus-visible{box-shadow:var(--clay-in),0 0 0 3px color-mix(in srgb,var(--b2) 35%,transparent)}
+html.clay .drop{background:var(--cs);border:0;border-radius:24px;box-shadow:var(--clay-in)}
+html.clay .me{background:var(--cs);border:0;border-radius:22px;box-shadow:var(--clay-sm)}
+html.clay .me img,html.clay .pf img{box-shadow:var(--clay-sm)}
+html.clay .sb{border-top-color:var(--ish)}html.clay .li,html.clay th,html.clay td,html.clay details{border-color:var(--ish)}
+html.clay .bar2{background:var(--cs);box-shadow:var(--clay-in);height:14px}
+html.clay .bar2 i{background:linear-gradient(145deg,var(--b1),var(--b2));border-radius:8px;box-shadow:2px 2px 6px var(--bsh)}
+html.clay .rg .dt{stroke:var(--ish)}html.clay .dp{filter:drop-shadow(2px 3px 3px var(--bsh))}
+html.clay .ch rect{rx:10px;fill:var(--b2);filter:drop-shadow(3px 5px 4px var(--bsh))}
+html.clay .main{padding-top:12px!important;padding-left:14px!important;padding-right:24px!important}
+html.clay .g4 .stat:nth-child(1){background:var(--t1)}html.clay .g4 .stat:nth-child(2){background:var(--t2)}
+html.clay .g4 .stat:nth-child(3){background:var(--t3)}html.clay .g4 .stat:nth-child(4){background:var(--t4)}
+html.clay .stat b{text-shadow:1px 1px 0 var(--shl)}
+html.clay .sw input{box-shadow:none}
+

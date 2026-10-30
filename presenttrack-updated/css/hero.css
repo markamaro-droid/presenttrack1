@@ -1,0 +1,20 @@
+/* hero */
+.hero{position:relative;overflow:hidden;border-radius:28px;padding:40px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;
+  background:radial-gradient(90% 70% at 90% 100%,color-mix(in srgb,var(--hero3) 65%,transparent) 0,transparent 60%),radial-gradient(80% 60% at 0 0,color-mix(in srgb,var(--hero2) 70%,transparent) 0,transparent 70%),color-mix(in srgb,var(--hero1) 55%,transparent)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px;letter-spacing:-.02em}
+.logo i{width:28px;height:28px;border-radius:9px;background:#fff;display:grid;place-items:center}
+.logo i::after{content:"";width:12px;height:12px;border-radius:50%;border:3px solid var(--hero2)}
+.hero h2{font-size:clamp(28px,3.4vw,44px);line-height:1.1;letter-spacing:-.03em;margin:0 0 14px;max-width:14em}
+.hero p{margin:0;color:#DAD2FF;max-width:30em}
+.stack{position:relative;height:250px;margin:28px 0}
+.note{position:absolute;left:0;right:0;display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:18px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  animation:drop .7s cubic-bezier(.2,.8,.2,1) both}
+.note:nth-child(1){top:0;width:88%;animation-delay:.15s}
+.note:nth-child(2){top:78px;left:8%;width:92%;animation-delay:.4s}
+.note:nth-child(3){top:156px;width:84%;animation-delay:.65s}
+.hero p,.stats{color:#E6F2FF}.note b{display:block;font-size:14px}.note span{font-size:13px;color:#DAD2FF}
+.dot{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:700;background:#fff;color:var(--hero2)}
+@keyframes drop{from{opacity:0;transform:translateY(-24px) scale(.96)}}
+.stats{display:flex;gap:32px;font-size:14px;color:#DAD2FF}
+.stats strong{display:block;font-family:Sora,sans-serif;font-size:22px;color:#fff}

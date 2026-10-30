@@ -1,0 +1,18 @@
+{
+  "title": "Benefits of a Daily Walk",
+  "topic": "Benefits of a daily walk",
+  "slides": [
+    {"kind":"title","title":"Benefits of a Daily Walk","bullets":["A short talk for beginners","Small steps, big difference"],"notes":"Welcome everyone and introduce the topic with a smile."},
+    {"kind":"intro","title":"Why Walking Matters","bullets":["Easy for almost anyone","No special equipment needed","Fits into a busy day"],"notes":"Explain why you chose this topic and what the audience will hear."},
+    {"kind":"point","title":"Walking Boosts Your Mood","bullets":["Fresh air clears the mind","Daylight lifts your energy","A quiet moment to think"],"notes":"Share how a walk feels after a long day."},
+    {"kind":"point","title":"Walking Keeps You Active","bullets":["Gentle movement every day","Easy to build into a routine","Stairs and errands count too"],"notes":"Describe how small walks add up over a week."},
+    {"kind":"example","title":"My Evening Walk","bullets":["Thirty minutes after dinner","Same park route each day","Listening to my favorite songs"],"notes":"Tell a short personal story about your own walk."},
+    {"kind":"conclusion","title":"Take the First Step","bullets":["Start with ten minutes","Pick a time that suits you","Enjoy the journey"],"notes":"Thank the audience and encourage them to try it today."}
+  ],
+  "guidelines": {
+    "overview": "Present these slides in your own words for about two to three minutes.",
+    "estimatedMinutes": 3,
+    "tips": ["Speak at a comfortable pace","Pause briefly between slides","Look at the slides for cues"],
+    "instructions": ["Read through all slides","Prepare what you want to say","Record yourself in a quiet place","Speak naturally for 2-3 minutes"]
+  }
+}

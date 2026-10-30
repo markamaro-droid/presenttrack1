@@ -1,0 +1,61 @@
+.hero{gap:28px;justify-content:flex-start}.hero>div:last-child{margin-top:auto}
+.rig{position:relative;margin-top:24px;padding:18px;border-radius:22px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:grid;gap:16px}
+.rig-top{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.ring{position:relative;width:132px;height:132px;flex:none}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:8;stroke-linecap:round}
+.trk{stroke:rgba(255,255,255,.2)}.prg{stroke:#5EEAD4;stroke-dasharray:339.3;stroke-dashoffset:339.3;filter:drop-shadow(0 0 6px currentColor);transition:stroke .3s}
+.time{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.time b{font:700 30px Sora,sans-serif;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.time span{font-size:12px;color:#DCEBFF}
+.ctl{display:grid;gap:12px;flex:1;min-width:190px}
+.presets,.btns{display:flex;gap:8px;flex-wrap:wrap}
+.presets button{border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:999px;padding:6px 14px;font:500 13px "DM Sans",sans-serif;cursor:pointer}
+.presets button[aria-pressed=true]{background:#fff;color:var(--hero1);border-color:#fff}
+.pb{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;border-radius:12px;padding:10px 16px;font:600 14px "DM Sans",sans-serif;cursor:pointer;transition:transform .1s,background .15s}
+.pb:hover{background:rgba(255,255,255,.2)}.pb:active{transform:scale(.96)}
+.pb.prim{background:#fff;color:var(--hero1);border-color:#fff}.pb.prim:hover{background:#EAF3FF}
+.hero button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.wave{display:flex;align-items:center;gap:3px;height:44px}
+.wave i{flex:1;height:100%;border-radius:3px;background:linear-gradient(#fff,#5EEAD4);transform:scaleY(.08);opacity:.9}
+.pace-h{display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px}.pace-h b{font-variant-numeric:tabular-nums}
+.pbar{position:relative;height:10px;border-radius:6px;background:linear-gradient(90deg,#FFD166 0 33.3%,#5EEAD4 33.3% 66.6%,#FF7AA8 66.6%);}
+.pbar i{position:absolute;top:-4px;left:50%;width:6px;height:18px;margin-left:-3px;border-radius:3px;background:#fff;box-shadow:0 0 0 2px rgba(0,0,0,.25)}
+.zones{display:flex;justify-content:space-between;font-size:12px;color:#DCEBFF;margin-top:6px}
+.fill>span{display:block;font-size:13px;color:#DCEBFF;margin-bottom:8px}
+#chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:7px 8px 7px 14px;font:500 14px "DM Sans",sans-serif;cursor:pointer;display:flex;gap:8px;align-items:center}
+.chip b{min-width:22px;height:22px;border-radius:11px;background:#fff;color:var(--hero1);display:grid;place-items:center;font-size:12px}
+.chip.pop{animation:pop .25s}@keyframes pop{50%{transform:scale(1.12)}}
+.res{position:absolute;inset:0;z-index:2;border-radius:22px;padding:20px;background:color-mix(in srgb,var(--hero1) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:12px;justify-content:center}
+.score{display:flex;align-items:baseline;gap:12px}.score b{font:700 56px/1 Sora,sans-serif;letter-spacing:-.03em}.score span{font-weight:600;color:#5EEAD4}
+.res ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px}
+.res li{padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.1)}
+.res small{color:#DCEBFF}.res .pb{align-self:flex-start}
+
+.vid{margin-top:24px;border-radius:22px;overflow:hidden;background:rgba(10,8,30,.5);border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.stage{position:relative;container-type:inline-size;aspect-ratio:16/10;overflow:hidden;background:radial-gradient(80% 90% at 15% 0,rgba(255,255,255,.14),transparent 60%)}
+.stage *{pointer-events:none}
+.bar{position:absolute;top:0;left:0;right:0;height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;background:rgba(255,255,255,.08);font-size:12px;color:#DCEBFF;z-index:2}
+.bar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4)}.bar span{margin-left:8px}
+.bar em{margin-left:auto;font-style:normal;color:#FF7AA8;font-weight:600;animation:blink 1s infinite}@keyframes blink{50%{opacity:.35}}
+.scene{position:absolute;inset:30px 0 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.6cqw;padding:0 4cqw;opacity:0;transition:opacity .4s}
+.scene.on{opacity:1}.scene.s1{flex-direction:row;gap:5cqw}
+.lb{margin:0;font-size:max(11px,2.6cqw);color:#DCEBFF;text-align:center}
+.stage .ring{width:30cqw;height:30cqw}.stage .time b{font-size:5.6cqw}.stage .time span{font-size:max(9px,2.3cqw)}
+.col{display:grid;gap:3.5cqw;width:46cqw}.stage .wave{height:9cqw}
+.stage .pace-h{font-size:max(11px,2.6cqw);margin-bottom:6px}
+.stage .presets button,.stage .chip{font-size:max(11px,2.6cqw)}
+.tips{margin:0;padding:0;list-style:none;display:grid;gap:1.6cqw;width:min(100%,70cqw);font-size:max(11px,2.5cqw)}
+.tips li{padding:1.8cqw 2.6cqw;border-radius:10px;background:rgba(255,255,255,.12)}
+.stage .score b{font-size:11cqw}
+#cur{position:absolute;left:0;top:0;width:22px;height:22px;z-index:3;opacity:0;transition:opacity .3s;filter:drop-shadow(0 2px 4px rgba(0,0,0,.45))}
+.cap{display:flex;gap:10px;align-items:center;padding:12px 14px 4px;font-size:14px;min-height:44px}
+.cap b{flex:none;width:24px;height:24px;border-radius:50%;background:#fff;color:var(--hero1);display:grid;place-items:center;font-size:13px}
+.ctl2{display:flex;align-items:center;gap:12px;padding:6px 14px 14px}.ctl2 .pb{padding:6px 12px;font-size:13px;min-width:64px}
+.segs{flex:1;display:flex;gap:4px}
+.seg{flex:1;height:18px;background:none;border:0;padding:0;position:relative;cursor:pointer}
+.seg::before,.seg i{content:"";position:absolute;left:0;top:6px;height:6px;border-radius:3px}
+.seg::before{right:0;background:rgba(255,255,255,.25)}.seg i{background:#fff;width:0}
+.seg:focus-visible{outline:3px solid #fff;outline-offset:2px}
+#tm{font-size:12px;color:#DCEBFF;font-variant-numeric:tabular-nums}
+

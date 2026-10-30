@@ -1,0 +1,19 @@
+:root{
+  --bg:#84C0E8; --panel:#FFFFFF; --ink:#0B2540; --muted:#48657F; --line:#9CC6E4;
+  --field:#EEF8FF; --brand:#1570D0; --brand-ink:#FFFFFF; --ok:#0E8F6E; --err:#C92A5F;
+  --hero1:#0A3466; --hero2:#1877D2; --hero3:#7FD0FA;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E0B1C; --panel:#171330; --ink:#F1EEFF; --muted:#A39CC4; --line:#2C2650;
+  --field:#1E1940; --brand:#8A6BFF; --brand-ink:#100A2E; --ok:#4ADBB5; --err:#FF7AA8;
+  --hero1:#160F35; --hero2:#3A22A8; --hero3:#8A6BFF;}}
+:root[data-theme="dark"]{
+  --bg:#0E0B1C; --panel:#171330; --ink:#F1EEFF; --muted:#A39CC4; --line:#2C2650;
+  --field:#1E1940; --brand:#8A6BFF; --brand-ink:#100A2E; --ok:#4ADBB5; --err:#FF7AA8;
+  --hero1:#160F35; --hero2:#3A22A8; --hero3:#8A6BFF;}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;background:var(--bg);scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:transparent;color:var(--ink);font:400 16px/1.5 "DM Sans",system-ui,sans-serif}
+h1,h2,.logo{font-family:Sora,"DM Sans",system-ui,sans-serif}
+.shell{min-height:100vh;display:grid;grid-template-columns:1.05fr 1fr;gap:16px;padding:16px}

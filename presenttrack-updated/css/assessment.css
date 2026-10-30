@@ -1,0 +1,31 @@
+/* ===== My Presentations cards, assessment page, results ===== */
+.dcard{display:grid;gap:12px;align-content:start}
+.dcard .dk,.dcard .rd0{margin-bottom:0}
+.th{width:100%;aspect-ratio:16/9;border-radius:16px;object-fit:cover;display:block;background:#fff;box-shadow:var(--clay-in)}
+.th.pv{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:6% 7%;overflow:hidden;color:#14213d;background:linear-gradient(150deg,#fff,#EAF3FF)}
+.th.pv b{font:700 clamp(14px,1.6vw,18px)/1.2 Sora,sans-serif;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.th.pv span{font-size:12px;color:#4b5b78;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.th.ph{align-items:center;background:var(--cb1);color:var(--muted)}
+.alo{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px}
+.alo i{width:18px;height:18px;border-radius:50%;border:3px solid var(--ish);border-top-color:var(--b2);animation:aspin .8s linear infinite;flex:none}
+@keyframes aspin{to{transform:rotate(360deg)}}
+.albl{font-weight:700;letter-spacing:.08em;color:var(--b2)!important}
+.acard{background:linear-gradient(150deg,color-mix(in srgb,var(--b1) 22%,var(--cs)),var(--cs) 62%)!important}
+.arec{display:grid;gap:14px;justify-items:start}
+.atm{display:flex;align-items:baseline;gap:12px}.atm b{font:700 44px/1 Sora,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.02em}.atm small{color:var(--muted)}.atm.rec small{color:var(--err);font-weight:600;animation:ablink 1s infinite}
+@keyframes ablink{50%{opacity:.45}}
+.alv{display:flex;align-items:center;gap:3px;height:48px;width:100%;max-width:520px;padding:6px 10px;border-radius:16px;background:var(--cs);box-shadow:var(--clay-in);box-sizing:border-box}
+.alv i{flex:1;height:100%;border-radius:3px;background:linear-gradient(var(--b1),var(--b2));transform:scaleY(.08);transition:transform .08s}
+.sld.stitle{display:flex;flex-direction:column;justify-content:center}.sld.stitle h4{font-size:clamp(22px,4vw,40px)}
+.gate .sub{max-width:44em}
+.g-perf.five{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:1150px){.g-perf.five{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.g-perf.five{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.g-perf.five{display:grid;overflow:visible;padding-bottom:0}.g-perf.five .mc{min-width:0}}
+.cht .pv{fill:var(--ink)}
+.lg{display:inline-block;width:10px;height:10px;border-radius:3px;vertical-align:-1px}.lg.amber{background:#E8930C}.lg.red{background:color-mix(in srgb,var(--err) 55%,transparent)}
+html.clay .bt.dnb{background:linear-gradient(145deg,#F0728F,var(--err));color:#fff;box-shadow:var(--clay-bt)}
+.bt.dnb{background:var(--err);color:#fff}
+.mc[role=alertdialog] h2{font:700 20px Sora,sans-serif}
+.dcard .st.warn{color:#B86E00}
+.dcard .acts .bt:disabled{opacity:.45}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PresentTrack – Sign in or create an account</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/tour-demo.css">
+<link rel="stylesheet" href="css/app-shell.css">
+<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="css/clay.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tour-guide.css">
+<link rel="stylesheet" href="css/assessment.css">
+</head>
+<body>
+<canvas id="water" aria-hidden="true"></canvas>
+<div class="shell">
+  <aside class="hero">
+    <div class="logo"><i></i>PresentTrack</div>
+    <div>
+      <h2>Rehearse out loud. Walk in ready.</h2>
+      <p>Watch a 20-second tour: set the timer, speak, log filler words and get a score with clear next steps.</p>
+      <div class="vid" aria-label="How PresentTrack works: a 20 second product tour">
+        <div class="stage" id="stage" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i><span>PresentTrack · Practice room</span><em id="rec" hidden>● REC</em></div>
+          <div class="scene"><p class="lb">Talk length</p>
+            <div class="presets"><button tabindex="-1" data-m="3">3 min</button><button tabindex="-1" data-m="5" id="c5">5 min</button><button tabindex="-1" data-m="10">10 min</button></div>
+            <button class="pb prim" id="go" tabindex="-1">Start practice</button><p class="lb" id="s0m">Timer is running</p></div>
+          <div class="scene s1"><div class="ring"><svg viewBox="0 0 120 120"><circle class="trk" cx="60" cy="60" r="54"/><circle class="prg" id="prg" cx="60" cy="60" r="54"/></svg><div class="time"><b id="clock">0:00</b><span id="left">of 5:00</span></div></div>
+            <div class="col"><div><p class="lb">Voice</p><div class="wave" id="wave"></div></div>
+              <div><div class="pace-h"><span>Pace</span><b id="pv">– wpm</b></div><div class="pbar"><i id="pm"></i></div><div class="zones"><span>Slow</span><span>Clear</span><span>Fast</span></div></div></div></div>
+          <div class="scene" id="s2"><p class="lb">Filler words</p>
+            <div id="chips"><button class="chip" tabindex="-1" data-f="um">um <b>0</b></button><button class="chip" tabindex="-1" data-f="like">like <b>0</b></button><button class="chip" tabindex="-1" data-f="you know">you know <b>0</b></button><button class="chip" tabindex="-1" data-f="so">so <b>0</b></button></div>
+            <p class="lb">Each tap is saved for your feedback</p></div>
+          <div class="scene"><div class="score"><b id="sc">0</b><span id="sl">Your score</span></div>
+            <ul class="tips"><li>Timing: 4:52 of 5:00. Right on time.</li><li>Fillers: 3 “um”. Try a short pause instead.</li><li>Pace: 142 wpm. In the clear zone.</li></ul></div>
+          <svg id="cur" viewBox="0 0 24 24"><path d="M3 2l7 19 3-8 8-3z" fill="#fff" stroke="#0A3466" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="cap"><b id="capn">1</b><span id="capt"></span></div>
+        <div class="ctl2"><button type="button" class="pb" id="pp">Pause</button>
+          <div class="segs"><button type="button" class="seg" aria-label="Go to step 1"><i></i></button><button type="button" class="seg" aria-label="Go to step 2"><i></i></button><button type="button" class="seg" aria-label="Go to step 3"><i></i></button><button type="button" class="seg" aria-label="Go to step 4"><i></i></button></div>
+          <span id="tm">0:00 / 0:20</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="auth">
+    <div class="card">
+      <div class="top"><button class="theme" id="theme" type="button">Toggle theme</button></div>
+
+      <div id="authView">
+        <div class="tabs" id="tabs" data-tab="login" role="tablist">
+          <span class="pill"></span>
+          <button role="tab" id="t-login" aria-selected="true" aria-controls="loginForm" type="button">Log in</button>
+          <button role="tab" id="t-register" aria-selected="false" aria-controls="registerForm" type="button">Register</button>
+        </div>
+
+        <form id="loginForm" novalidate role="tabpanel" aria-labelledby="t-login">
+          <h1>Welcome back</h1>
+          <p class="sub">Log in to pick up your last practice run.</p>
+          <div class="field"><label for="le">Email</label><input id="le" type="email" autocomplete="email" placeholder="you@company.com"><p class="err" id="le-e"></p></div>
+          <div class="field"><label for="lp">Password</label>
+            <div class="inp"><input id="lp" type="password" autocomplete="current-password" placeholder="Enter your password"><button class="eye" type="button" data-for="lp" aria-label="Show password">Show</button></div>
+            <p class="err" id="lp-e"></p></div>
+          <div class="row"><label class="chk"><input type="checkbox" id="rem"> Keep me signed in</label><a href="#" id="forgot">Forgot password?</a></div>
+          <button class="btn" type="submit">Log in</button>
+        </form>
+
+        <form id="registerForm" novalidate hidden role="tabpanel" aria-labelledby="t-register">
+          <h1>Create your account</h1>
+          <p class="sub">Start rehearsing in minutes. No card needed.</p>
+          <div class="field"><label for="rn">Full name</label><input id="rn" type="text" autocomplete="name" placeholder="Alex Rivera"><p class="err" id="rn-e"></p></div>
+          <div class="field"><label for="re">Work email</label><input id="re" type="email" autocomplete="email" placeholder="you@company.com"><p class="err" id="re-e"></p></div>
+          <div class="field"><label for="rp">Password</label>
+            <div class="inp"><input id="rp" type="password" autocomplete="new-password" placeholder="At least 8 characters"><button class="eye" type="button" data-for="rp" aria-label="Show password">Show</button></div>
+            <div class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <p class="hint" id="rp-h">Use 8+ characters with a number and a capital letter.</p><p class="err" id="rp-e"></p></div>
+          <div class="field"><label class="chk"><input type="checkbox" id="terms"> <span>I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</span></label><p class="err" id="terms-e"></p></div>
+          <button class="btn" type="submit">Create account</button>
+        </form>
+
+        <div class="or">or continue with</div>
+        <div class="social">
+          <button class="btn ghost" type="button" data-p="Google"><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.4-4.8 7.1l7.6 5.9c4.4-4.1 7-10.1 7-17.5z"/><path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>Google</button>
+          <button class="btn ghost" type="button" data-p="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</button>
+        </div>
+        <p class="switch" id="switch"></p>
+      </div>
+
+      <div class="ok" id="okView" hidden>
+        <div class="tick" aria-hidden="true">✓</div>
+        <h1 id="okTitle"></h1>
+        <p class="sub" id="okMsg"></p>
+        <button class="btn" id="out" type="button">Sign out</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="app" id="app" hidden>
+  <aside class="side" id="side">
+    <div class="logo sl"><i></i>PresentTrack</div>
+    <nav id="nav" aria-label="Main navigation"></nav>
+    <div class="sb">
+      <button class="nv" id="help" type="button"></button>
+      <button class="nv" id="lo" type="button"></button>
+      <button class="me" id="me" type="button" aria-label="Open profile settings"><img id="av" alt="Your profile picture"><span><b id="mn"></b><small id="mm"></small></span></button>
+    </div>
+  </aside>
+  <header class="top" id="top">
+    <button class="tb mbtn" id="menu" type="button" aria-label="Open menu">☰</button>
+    <div class="logo tl"><i></i>PresentTrack</div>
+    <div class="srch"><input type="text" id="q" placeholder="Search presentations, reports, or practice sessions..." aria-label="Search" autocomplete="off"><div class="pop" id="qr" hidden></div></div>
+    <div class="tr">
+      <div class="rel"><button class="tb bell" id="bell" type="button" aria-label="Notifications"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></svg><em id="bn" hidden>3</em></button><div class="pop" id="np" hidden></div></div>
+      <div class="rel"><button class="tb prof" id="pb" type="button" aria-label="Account menu"><img id="tav" alt=""><span><b id="tn"></b><small>Student</small></span><i>▾</i></button>
+        <div class="pop" id="pmn" hidden><button type="button" data-mp="profile">My Profile</button><button type="button" data-mp="settings">Settings</button><button type="button" data-mp="out">Logout</button></div></div>
+    </div>
+  </header>
+  <main class="main" id="mainc"><div id="view"></div></main>
+  <div class="tcap" id="tcap" hidden aria-live="off"><p id="tsub"></p></div>
+  <div class="spot" id="spot" hidden aria-hidden="true"><b></b></div>
+  <div class="modal" id="hm" hidden><div class="mc" role="dialog" aria-label="Help"><h2>Help</h2>
+    <ul><li>Upload a presentation, then open Practice to rehearse it out loud.</li><li>Tap a filler word each time you hear yourself say it.</li><li>Finish a session to get a score and tips. It is saved to Practice history and Progress.</li><li>Change your picture and defaults in Settings.</li></ul>
+    <div class="acts"><button class="bt gh" id="hrt" type="button">Replay guided tour</button><button class="bt" id="hx" type="button">Got it</button></div></div></div>
+  <div class="toast" id="toast" role="status"></div>
+</div>
+<section class="land" id="land" hidden aria-label="Welcome"></section>
+<div class="tcap" id="rcap" hidden role="status" aria-live="polite"><p id="rsub"></p></div>
+<div id="wipe" hidden aria-hidden="true"><i></i>PresentTrack</div>
+<button class="bmini" id="bmini" type="button" hidden aria-label="Show robot companion"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="7" width="22" height="18" rx="7" fill="#fff" stroke="#9fb4d6" stroke-width="1.5"/><rect x="9" y="12" width="14" height="8" rx="4" fill="#12162b"/><circle cx="13" cy="16" r="1.8" fill="#7fd0fa"/><circle cx="19" cy="16" r="1.8" fill="#7fd0fa"/></svg></button>
+<div id="bot" hidden><div class="tour" id="tour" hidden role="region" aria-label="Guided tour"></div><canvas id="bc" role="button" tabindex="0" aria-keyshortcuts="Space T" aria-label="PresentTrack assistant. Tap or press Enter for options. Press and hold to talk, or hold the Space bar or the T key." title="Tap for options. Hold to talk."></canvas><div class="bbar"><button class="bmute" id="bmute" type="button" aria-label="Mute robot voice" aria-pressed="false" title="Mute robot voice">🔊</button><button class="bguide" id="bguide" type="button" hidden>Guide me</button><button class="bmin" id="bmin" type="button">Minimize</button></div></div>
+<input type="file" id="pic" accept="image/*" hidden>
+<script src="js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/cloud.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/water.js"></script>
+<script src="js/hero-tour-demo.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/assessment.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="assets/models/robot-glb.js"></script>
+<script src="js/robot.js"></script>
+</body>
+</html>
